@@ -8,7 +8,7 @@ const Editproject = () => {
   let [projectname, setProjectname] = useState(" ");
   let [year, setYear] = useState(" ");
   let [location, setLocation] = useState(" ");
-  let [logo, setLogo] = useState(" ");
+  
 
   useEffect(() => {
     const getId = async () => {
@@ -20,7 +20,7 @@ const Editproject = () => {
       setLocation(res.data.location);
       setYear(res.data.year);
       setProjectname(res.data.project);
-      setLogo(res.data.logo);
+      
     };
     getId();
   }, [_id]);
@@ -30,7 +30,7 @@ const Editproject = () => {
     project: projectname,
     location: location,
     year: year,
-    logo: logo,
+    
   };
 
   const update = async () => {
@@ -55,7 +55,7 @@ const Editproject = () => {
             </div>
           </div>
           <div className="row p-4 mb-5">
-            <div className="col-md-4">
+            <div className="col-md-6">
               <form>
                 <div className="mb-2">
                   <label></label>
@@ -94,15 +94,7 @@ const Editproject = () => {
                     placeholder="year"
                   />
                 </div>
-                <div className="mb-2">
-                  <input
-                    type="text"
-                    value={logo}
-                    onChange={(e) => setLogo(e.target.value)}
-                    className="form-control"
-                    placeholder="logo"
-                  />
-                </div>
+                
                 <div className="mb-2">
                   <input
                     type="submit"
@@ -116,7 +108,7 @@ const Editproject = () => {
                 </div>
               </form>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-6">
               <img
                 alt="err"
                 className="contact-file"
@@ -124,14 +116,7 @@ const Editproject = () => {
                 onChange={(e) => setImage(e.target.value)}
               />
             </div>
-            <div className="col-md-4">
-              <img
-                alt="err"
-                className="contact-file"
-                src={logo}
-                onChange={(e) => setLogo(e.target.value)}
-              />
-            </div>
+            
           </div>
         </div>
       </section>
