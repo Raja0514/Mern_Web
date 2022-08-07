@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const Admin = () => {
   //let {_id } = useParams();
-  const navigate=useNavigate()
+  const Navigate=useNavigate()
   const [datas, setData] = useState([]);
   console.log(datas);
   const getId = async () => {
@@ -19,8 +19,8 @@ const Admin = () => {
   }, []);
   const handlelogout = () => {
     localStorage.clear();
-    window.location.reload();
-    navigate('/')
+    //window.location.reload();
+    Navigate('/')
     
     
   };
