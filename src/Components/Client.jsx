@@ -9,7 +9,7 @@ class Client extends React.Component {
     };
   }
   componentDidMount = () => {
-    axios.get("http://localhost:8080/router2/logo").then((res) => {
+    axios.get("https://rak0000.herokuapp.com/data").then((res) => {
       const datac = res.data;
       console.log(datac);
       this.setState({ datas: datac });
@@ -23,8 +23,10 @@ class Client extends React.Component {
           <div className="conatiner">
             <div className="row p-4 mb-5">
               <div className="col">
-                <p className="h3 text-center p-2">
+                <p className="h3 text-center">
                   List of Our Clients
+
+                  <hr className="w-25 mx-auto mb-4"></hr>
 
                   {/* <Link
                     className="btn btn-primary ms-2"
@@ -47,7 +49,7 @@ class Client extends React.Component {
             </div>
           </div>
 
-          <div className="row mb-4">
+          <div className="row  ">
             {this.state.datas.length > 0 &&
               this.state.datas.map((pro) => {
                 return (
@@ -57,7 +59,7 @@ class Client extends React.Component {
                         <div className="row justify-content-center align-items-center">
                           <div className="col p-1">
                             <img
-                              src={pro.logourl}
+                              src={pro.logo}
                               alt="err"
                               className="contact-file0"
                             />

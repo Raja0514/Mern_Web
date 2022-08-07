@@ -22,7 +22,7 @@ class Register extends Component {
       this.state.password !== "")
     ) {
       axios
-        .post("http://localhost:8080/router0/register", this.state)
+        .post("https://rak0000.herokuapp.com/register", this.state)
         .then((res) => {
           this.setState({ name: "", email: "", password: "" });
         });

@@ -5,51 +5,37 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      datas: []
+      datas: [],
     };
   }
 
   componentDidMount = () => {
-    axios.get("http://localhost:8080/router1/data").then((res) => {
+    axios.get("https://rak0000.herokuapp.com/data").then((res) => {
       const datac = res.data;
       console.log(datac);
       this.setState({ datas: datac });
     });
   };
 
-  deleteProject=()=>{
-
-    console.log('deleted')
-
-
-  }
-
+ 
   render() {
     return (
       <React.Fragment>
         <section className="project-search p-3">
-          <div className="conatiner">
+          <div className="conatiner-fluid">
             <div className="grid">
               <div className="row">
                 <div className="col">
                   <p className="h3 text-center p-2">
                     List of Our Projects
-                    
-                    
-                      
-
-                       {/* <Link
+                    <hr className="w-25 mx-auto mb-4"></hr>
+                    {/* <Link
                         className="btn btn-primary ms-2"
                         to="/Components/Projectss/Addproject"
                       >
                         <i className="fa fa-plus-circle me-2" />
                         Add New Project
                       </Link> */}
-
-                    
-                    
-                      
-                      
                   </p>
                   <p className="fst-italic">
                     Gaining experience over the past 20 years in international
@@ -66,8 +52,7 @@ class Project extends React.Component {
         </section>
 
         <section className="project-list">
-          <div className="container">
-            
+          <div className="container-fluid">
             <div className="row mb-5">
               {this.state.datas.length > 0 &&
                 this.state.datas.map((pro) => {
@@ -88,9 +73,7 @@ class Project extends React.Component {
                               <ul className="list-group">
                                 <li className="list-group-item list-group-item-action">
                                   Project:
-                                  <span className="fw-bold">
-                                    {pro.project}
-                                  </span>
+                                  <span className="fw-bold">{pro.project}</span>
                                 </li>
                                 <li className="list-group-item list-group-item-action">
                                   Location:
@@ -106,20 +89,16 @@ class Project extends React.Component {
                             </div>
 
                             <div className="col-md-1    d-flex flex-column  align-items-center ">
-
-                              
                               {/* <Link
-                                to="/Components/Projectss/Editproject:ProjectId"
+                                to={`/Components/Projectss/Editproject/${pro._id}`}
                                 className="btn btn-secondary my-1"
                               >
                                 <i className="fa fa-pen" />
-                              </Link>
-                               */}
+                              </Link> */}
+
                               {/* <button  onClick={this.deleteProject}  className="btn btn-success my-1">
                                 <i className="fa fa-trash" />
-                              </button> */}
-                              
-                              
+                              </button>  */}
 
                               <Link
                                 to={`/Components/Projectss/Viewproject/${pro._id}`}

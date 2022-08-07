@@ -19,7 +19,8 @@ class AddClient extends React.Component {
 
     if (this.state.logourl !== "") {
       axios
-        .post("http://localhost:8080/router2/logopost", this.state)
+        .post("http://localhost:8080/router2/logo", this.state)
+        
         .then((res) => {
           this.setState({ logourl: "" });
           console.log(res);
@@ -30,7 +31,7 @@ class AddClient extends React.Component {
     return (
       <React.Fragment>
         <section className="Add-project p-3">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row  py-4">
               <div className="col">
                 <p className="h4 text-success fw-bold p-1">Add New Client</p>
@@ -45,7 +46,7 @@ class AddClient extends React.Component {
               </div>
             </div>
 
-            <div className="row  mt-5 mb-5 py-5">
+            <div className="row  mt-5 mb-4 py-5">
               <div className="col-md-4">
                 <form onSubmit={this.handleSubmit}>
                   <div className="mb-5">

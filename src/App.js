@@ -50,7 +50,7 @@ const App = () => {
         
 
         <Route
-          path="/Components/Projectss/Editproject:ProjectId"
+          path="/Components/Projectss/Editproject/:_id"
           element={<Editproject />}
         />
         <Route

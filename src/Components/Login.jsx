@@ -23,8 +23,11 @@ const Login = () => {
 
     const { email, password } = user;
 
+    console.log(email);
+    console.log(password);
+
     axios
-      .post("http://localhost:8080/router0/login", user)
+      .post("https://rak0000.herokuapp.com/login", user)
 
       //console.log(user)
 

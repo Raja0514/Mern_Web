@@ -28,6 +28,7 @@ class Addproject extends React.Component {
     ) {
       axios
         .post("http://localhost:8080/router1/post", this.state)
+        
         .then((res) => {
           this.setState({ photo: "", project: "", location: "", year: "" });
           console.log(res);
@@ -38,10 +39,11 @@ class Addproject extends React.Component {
     return (
       <React.Fragment>
         <section className="Add-project">
-          <div className="container">
+          <div className="container-fluid mt-5">
+          <p className="h4 p-3 text-success fw-bold">Add New project</p> 
             <div className="row p-3">
               <div className="col">
-                <p className="h4 text-success fw-bold">Add New project</p>
+                
                 <p className="fst-italic">
                   Gaining experience over the past 20 years in international
                   markets, allows us to grab a better understanding of our
@@ -52,8 +54,9 @@ class Addproject extends React.Component {
                 </p>
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-4">
+            <div className="container-fluid ">
+            <div className="row mb-5 ">
+              <div className="col-md-4 mb-5">
                 <form onSubmit={this.handleSubmit}>
                   <div className="mb-2">
                     <input
@@ -95,7 +98,7 @@ class Addproject extends React.Component {
                       value={this.state.year}
                     />
                   </div>
-                  <div className="mb-2">
+                  <div className="mb-4">
                     <input
                       type="submit"
                       className="btn btn-success"
@@ -103,7 +106,7 @@ class Addproject extends React.Component {
                     />
                     <Link
                       to="/admin"
-                      className="btn btn-dark ms-2"
+                      className="btn btn-danger ms-2"
                     >
                       Back
                     </Link>
@@ -111,6 +114,9 @@ class Addproject extends React.Component {
                 </form>
               </div>
             </div>
+
+            </div>
+            
           </div>
         </section>
       </React.Fragment>
