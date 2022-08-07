@@ -23,7 +23,7 @@ const Navbar = () => {
                 Marble World
               </Link>
               <li className="nav-item">
-                <Link className="nav-link active fs-8" to="/">
+                <Link className="nav-link active fs-8" to="/home">
                   Home
                 </Link>
               </li>
