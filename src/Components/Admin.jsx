@@ -1,11 +1,12 @@
 import React from "react";
 import axios from "axios";
-import { Link, Navigate } from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 
 const Admin = () => {
   //let {_id } = useParams();
+  const navigate=useNavigate()
   const [datas, setData] = useState([]);
   console.log(datas);
   const getId = async () => {
@@ -18,8 +19,8 @@ const Admin = () => {
   }, []);
   const handlelogout = () => {
     localStorage.clear();
-    window.location.reload();
-    Navigate('/home')
+    navigate('/home')
+    
     
   };
   const handleDelete = async (_id) => {
