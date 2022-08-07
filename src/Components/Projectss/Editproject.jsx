@@ -1,53 +1,44 @@
 import React from "react";
 import axios from "axios";
-import { useEffect,useState } from "react";
-import {Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 const Editproject = () => {
   let { _id } = useParams();
-   let [image,setImage]=useState("");
-   let [projectname,setProjectname]=useState(" ");
-   let [year,setYear]=useState(" ");
-   let [location,setLocation]=useState(" ");
-   let [logo,setLogo]=useState(" ")
-   
-   
-  useEffect(()=>{
-  const getId = async()=>{
-  let res= await axios.get(`https://rak0000.herokuapp.com/${_id}`)
-  
-  console.log(res)
-  
-    setImage(res.data.photo)
-    setLocation(res.data.location)
-    setYear(res.data.year)
-    setProjectname(res.data.project)
-    setLogo(res.data.logo)
+  let [image, setImage] = useState("");
+  let [projectname, setProjectname] = useState(" ");
+  let [year, setYear] = useState(" ");
+  let [location, setLocation] = useState(" ");
+  let [logo, setLogo] = useState(" ");
 
-}
-getId();
-},[_id])
+  useEffect(() => {
+    const getId = async () => {
+      let res = await axios.get(`https://rak0000.herokuapp.com/${_id}`);
 
-const data={
+      console.log(res);
 
-photo:image,
-project:projectname,
-location: location,
-year:year,
-logo:logo
-}
+      setImage(res.data.photo);
+      setLocation(res.data.location);
+      setYear(res.data.year);
+      setProjectname(res.data.project);
+      setLogo(res.data.logo);
+    };
+    getId();
+  }, [_id]);
 
-const update=async()=>{
+  const data = {
+    photo: image,
+    project: projectname,
+    location: location,
+    year: year,
+    logo: logo,
+  };
 
-
-  await axios.put(`https://rak0000.herokuapp.com/update/${_id}`,data)
-
-}
-
-
-
+  const update = async () => {
+    await axios.put(`https://rak0000.herokuapp.com/update/${_id}`, data);
+  };
 
   return (
-  <React.Fragment>
+    <React.Fragment>
       <section className="Edit-project">
         <div className="container-fluid">
           <div className="row p-3 mb-5">
@@ -64,7 +55,6 @@ const update=async()=>{
             </div>
           </div>
           <div className="row p-4 mb-5">
-
             <div className="col-md-4">
               <form>
                 <div className="mb-2">
@@ -72,7 +62,7 @@ const update=async()=>{
                   <input
                     type="text"
                     value={image}
-                    onChange={(e)=>setImage(e.target.value)}
+                    onChange={(e) => setImage(e.target.value)}
                     className="form-control"
                     placeholder="phtoturl"
                   />
@@ -81,7 +71,7 @@ const update=async()=>{
                   <input
                     type="text"
                     value={projectname}
-                    onChange={(e)=>setProjectname(e.target.value)}
+                    onChange={(e) => setProjectname(e.target.value)}
                     className="form-control"
                     placeholder="projectname"
                   />
@@ -90,7 +80,7 @@ const update=async()=>{
                   <input
                     type="text"
                     value={location}
-                    onChange={(e)=>setLocation(e.target.value)}
+                    onChange={(e) => setLocation(e.target.value)}
                     className="form-control"
                     placeholder="Location"
                   />
@@ -99,7 +89,7 @@ const update=async()=>{
                   <input
                     type="text"
                     value={year}
-                    onChange={(e)=>setYear(e.target.value)}
+                    onChange={(e) => setYear(e.target.value)}
                     className="form-control"
                     placeholder="year"
                   />
@@ -108,7 +98,7 @@ const update=async()=>{
                   <input
                     type="text"
                     value={logo}
-                    onChange={(e)=>setLogo(e.target.value)}
+                    onChange={(e) => setLogo(e.target.value)}
                     className="form-control"
                     placeholder="logo"
                   />
@@ -120,10 +110,7 @@ const update=async()=>{
                     value="Update"
                     onClick={update}
                   />
-                  <Link
-                    to="/admin"
-                    className="btn btn-danger ms-2"
-                  >
+                  <Link to="/admin" className="btn btn-danger ms-2">
                     Back
                   </Link>
                 </div>
@@ -131,21 +118,20 @@ const update=async()=>{
             </div>
             <div className="col-md-4">
               <img
-              alt="err"
-              className="contact-file"
-              src={image}
-              onChange={(e)=>setImage(e.target.value)}
+                alt="err"
+                className="contact-file"
+                src={image}
+                onChange={(e) => setImage(e.target.value)}
               />
             </div>
             <div className="col-md-4">
               <img
-              alt="err"
-              className="contact-file"
-              src={logo}
-              onChange={(e)=>setLogo(e.target.value)}
+                alt="err"
+                className="contact-file"
+                src={logo}
+                onChange={(e) => setLogo(e.target.value)}
               />
             </div>
-
           </div>
         </div>
       </section>
