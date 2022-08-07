@@ -36,10 +36,10 @@ year:year,
 logo:logo
 }
 
-const update=()=>{
+const update=async()=>{
 
 
-  axios.put(`https://rak0000.herokuapp.com/update/${_id}`,data)
+  await axios.put(`https://rak0000.herokuapp.com/update/${_id}`,data)
 
 }
 
