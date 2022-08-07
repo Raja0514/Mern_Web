@@ -8,6 +8,7 @@ const Editproject = () => {
    let [projectname,setProjectname]=useState(" ");
    let [year,setYear]=useState(" ");
    let [location,setLocation]=useState(" ");
+   let [logo,setLogo]=useState(" ")
    
    
   useEffect(()=>{
@@ -20,6 +21,7 @@ const Editproject = () => {
     setLocation(res.data.location)
     setYear(res.data.year)
     setProjectname(res.data.project)
+    setLogo(res.data.logo)
 
 }
 getId();
@@ -31,6 +33,7 @@ photo:image,
 project:projectname,
 location: location,
 year:year,
+logo:logo
 }
 
 const update=()=>{
@@ -62,7 +65,7 @@ const update=()=>{
           </div>
           <div className="row p-4 mb-5">
 
-            <div className="col-md-6">
+            <div className="col-md-4">
               <form>
                 <div className="mb-2">
                   <label></label>
@@ -117,7 +120,7 @@ const update=()=>{
                 </div>
               </form>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-4">
               <img
               alt="err"
               className="contact-file"
@@ -125,6 +128,15 @@ const update=()=>{
               onChange={(e)=>setImage(e.target.value)}
               />
             </div>
+            <div className="col-md-4">
+              <img
+              alt="err"
+              className="contact-file"
+              src={logo}
+              onChange={(e)=>setLogo(e.target.value)}
+              />
+            </div>
+
           </div>
         </div>
       </section>
