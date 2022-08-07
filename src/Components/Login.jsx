@@ -54,11 +54,11 @@ const Login = () => {
               </p>
               <h5 className="mb-4">OR</h5>
               <Link
-                to="/register"
+                to="/"
                 className="btn btn-outline-light 
                   rounded-pill pb-2 w-50"
               >
-                Register
+                Home
               </Link>
             </div>
 

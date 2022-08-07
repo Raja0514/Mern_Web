@@ -42,14 +42,6 @@ const Admin = () => {
                     Add New Project
                   </Link>
 
-                  <Link
-                    className="btn btn-primary ms-2"
-                    to="/Components/Projectss/Addclient"
-                  >
-                    <i className="fa fa-plus-circle me-2" />
-                    Add New Client
-                  </Link>
-
                   <button
                     className="btn btn-success m-2"
                     onClick={handlelogout}

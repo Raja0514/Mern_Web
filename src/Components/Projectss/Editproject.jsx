@@ -9,9 +9,10 @@ const Editproject = () => {
    let [year,setYear]=useState(" ");
    let [location,setLocation]=useState(" ");
    
+   
   useEffect(()=>{
   const getId = async()=>{
-  let res= await axios.get(`http://localhost:8080/router1/${_id}`)
+  let res= await axios.get(`https://rak0000.herokuapp.com/${_id}`)
   
   console.log(res)
   
@@ -29,12 +30,13 @@ const data={
 photo:image,
 project:projectname,
 location: location,
-year:year,}
+year:year,
+}
 
 const update=()=>{
 
 
-  axios.put(`http://localhost:8080/router1/update/${_id}`,data)
+  axios.put(`https://rak0000.herokuapp.com/update/${_id}`,data)
 
 }
 
@@ -59,6 +61,7 @@ const update=()=>{
             </div>
           </div>
           <div className="row p-4 mb-5">
+
             <div className="col-md-6">
               <form>
                 <div className="mb-2">

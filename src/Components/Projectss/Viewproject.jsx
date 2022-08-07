@@ -12,10 +12,11 @@ const Viewproject = () => {
    let [projectname,setProjectname]=useState(" ");
    let [year,setYear]=useState(" ");
    let [location,setLocation]=useState(" ");
+   let [logo,setLogo]=useState("");
   useEffect(()=>{
 
   const getId = async()=>{
-  let res= await axios.get(`http://localhost:8080/router1/${_id}`)
+  let res= await axios.get(`https://rak0000.herokuapp.com/${_id}`)
   
   console.log(res)
   
@@ -23,6 +24,8 @@ const Viewproject = () => {
     setLocation(res.data.location)
     setYear(res.data.year)
     setProjectname(res.data.project)
+    setLogo(res.data.logo)
+    
   
 }
 getId();
@@ -64,7 +67,7 @@ getId();
               />
             </div>
 
-            <div className="col-md-8">
+            <div className="col-md-4">
               <ul className="list-group">
                 <li className="list-group-item list-group-item-action">
                   Project Name:<span className="fw-bold" value={projectname} onChange={(e)=>setProjectname(e.target.value)}>{projectname}</span>
@@ -77,7 +80,17 @@ getId();
                 </li>
               </ul>
             </div>
+            <div className="col-md-4">
+              <img
+                src={logo}
+                onChange={(e)=>setLogo(e.target.value)}
+                alt="err"
+                className="contact-file"
+              />
+            </div>
+
           </div>
+          
 
           <div className="row p-2 mb-4">
             <div className="col">

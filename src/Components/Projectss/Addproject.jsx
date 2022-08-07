@@ -9,6 +9,7 @@ class Addproject extends React.Component {
       project: "",
       location: "",
       year: "",
+      logo:""
     };
   }
   handleChange = (e) => {
@@ -24,13 +25,15 @@ class Addproject extends React.Component {
       this.state.photo !== "" &&
       this.state.project !== "" &&
       this.state.location !== "" &&
-      this.state.year
+      this.state.year !=="" &&
+      this.state.logo
+
     ) {
       axios
-        .post("http://localhost:8080/router1/post", this.state)
+        .post("https://rak0000.herokuapp.com/post", this.state)
         
         .then((res) => {
-          this.setState({ photo: "", project: "", location: "", year: "" });
+          this.setState({ photo: "", project: "", location: "", year: "",logo:"" });
           console.log(res);
         });
     }
@@ -97,7 +100,20 @@ class Addproject extends React.Component {
                       onChange={(e) => this.handleChange(e)}
                       value={this.state.year}
                     />
+                    
                   </div>
+                  <div className="mb-2">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="logo"
+                      name="logo"
+                      onChange={(e) => this.handleChange(e)}
+                      value={this.state.logo}
+                    />
+                    
+                  </div>
+                  
                   <div className="mb-4">
                     <input
                       type="submit"
