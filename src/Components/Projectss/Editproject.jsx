@@ -106,6 +106,15 @@ const update=()=>{
                 </div>
                 <div className="mb-2">
                   <input
+                    type="text"
+                    value={logo}
+                    onChange={(e)=>setLogo(e.target.value)}
+                    className="form-control"
+                    placeholder="logo"
+                  />
+                </div>
+                <div className="mb-2">
+                  <input
                     type="submit"
                     className="btn btn-primary"
                     value="Update"
