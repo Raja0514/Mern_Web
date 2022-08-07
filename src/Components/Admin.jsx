@@ -18,6 +18,7 @@ const Admin = () => {
   }, []);
   const handlelogout = () => {
     localStorage.clear();
+    window.location.reload();
     Navigate('/home')
     
   };
