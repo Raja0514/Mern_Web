@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section id="service">
+    
       <div className="container-fluid mt-5 ">
         <div className="row mb-5  ">
           <div className="col mb-2">
@@ -39,7 +39,7 @@ const Services = () => {
           </div>
         </div>
       
-    </section>
+    
   );
 };
 export default Services;
