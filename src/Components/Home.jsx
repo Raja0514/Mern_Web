@@ -8,9 +8,9 @@ import Client from "./Client";
 const Home = () => {
   return (
     <>
-      <section id="home ">
+      
         <div className="container-fluid">
-          <div className="row justify-content-end py-5">
+          <div className="row  mt-5">
             <div className="col-md-6 align-items-center">
               <h3 className="disply-4 fw-folder mb-4 text-center ">
                 Welcome to Marble World
@@ -72,7 +72,7 @@ const Home = () => {
           <Project />
           <Contact />
         </div>
-      </section>
+      
     </>
   );
 };
