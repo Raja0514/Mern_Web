@@ -20,7 +20,7 @@ const About = () => {
              
             </div>
           </div>
-          <div className="row  ">
+          <div className="row mb-5 ">
             <div className="col">
               <h5 className="text-center ">Al Mudaibi quarry</h5>
               <img
