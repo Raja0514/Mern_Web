@@ -4,7 +4,7 @@ const Services = () => {
   return (
     
       <div className="container-fluid mt-5 ">
-        <div className="row mb-5  ">
+        <div className="row mb-5 py-2 ">
           <div className="col mb-2">
             <h3 className="fs-5 text-center ">Our Services</h3>
             <h1 className="display-6 text-center">
@@ -19,13 +19,14 @@ const Services = () => {
               <img
                 src="/assets/flow3.jpg"
                 alt="err"
-                className="contact-file1"
+                className="contact-file1 "
               />
             </div>
 
             <div className="col mb-3">
               <h5 className="text-center mb-3">NOAT-CNC Matrix</h5>
-              <img src="/assets/jpk.jpg" alt="err" className="contact-file1" />
+              <img src="/assets/jpk.jpg" alt="err" 
+              className="contact-file1 " />
             </div>
 
             <div className="col mb-3">

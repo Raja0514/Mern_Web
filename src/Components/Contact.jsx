@@ -26,8 +26,8 @@ class Contact extends Component {
   };
   render() {
     return (
-      <div>
-        <section id="contact">
+      <>
+        
           <div className="container-fluid py-5">
             <div className="row mb-5">
               <div className="col-md-12">
@@ -77,8 +77,8 @@ class Contact extends Component {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+      
+      </>
     );
   }
 }
