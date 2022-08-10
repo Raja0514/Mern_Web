@@ -5,7 +5,7 @@ const About = () => {
       
         <div className="container-fluid">
           <div className="row mt-3">
-            <div className="col-md-12 align-items-center">
+            <div className="col align-items-center">
               <div className="fs-5  text-center">About Us</div>
               <h1 className="display6 mb-2 text-center">
                 who <b>We</b> are
@@ -21,7 +21,7 @@ const About = () => {
             </div>
           </div>
           <div className="row  ">
-            <div className="col-md-4">
+            <div className="col">
               <h5 className="text-center ">Al Mudaibi quarry</h5>
               <img
                 src="/assets/quarry1.jpg"
@@ -29,7 +29,7 @@ const About = () => {
                 className="contact-file1"
               />
             </div>
-            <div className="col-md-4 ">
+            <div className="col">
               <h5 className="text-center ">Ibri Quarry</h5>
               <img
                 src="/assets/quarry2.jpg"
@@ -37,7 +37,7 @@ const About = () => {
                 className="contact-file1"
               />
             </div>
-            <div className="col-md-4">
+            <div className="col">
               <h5 className="text-center ">Sohar Quarry</h5>
               <img
                 src="/assets/quarry3.jpg"
