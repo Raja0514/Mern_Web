@@ -14,7 +14,7 @@ const Services = () => {
           </div>
         </div>
           <div className="row mb-5  ">
-            <div className="col mb-3">
+            <div className="col-md-4 mb-3">
               <h5 className="text-center mb-3 ">IFB -Wj</h5>
               <img
                 src="/assets/flow3.jpg"
@@ -23,13 +23,13 @@ const Services = () => {
               />
             </div>
 
-            <div className="col mb-3">
+            <div className="col-md-4 mb-3">
               <h5 className="text-center mb-3">NOAT-CNC Matrix</h5>
               <img src="/assets/jpk.jpg" alt="err" 
               className="contact-file1 " />
             </div>
 
-            <div className="col mb-3">
+            <div className="col-md-4 mb-3">
               <h5 className="text-center mb-3 ">Dynamic- XD Wj</h5>
               <img
                 src="/assets/flow2.jpg"

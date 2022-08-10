@@ -21,7 +21,7 @@ const About = () => {
             </div>
           </div>
           <div className="row mb-5 ">
-            <div className="col">
+            <div className="col-md-4">
               <h5 className="text-center mb-3 ">Al Mudaibi quarry</h5>
               <img
                 src="/assets/quarry1.jpg"
@@ -29,7 +29,7 @@ const About = () => {
                 className="contact-file1"
               />
             </div>
-            <div className="col">
+            <div className="col-md-4">
               <h5 className="text-center mb-3 ">Ibri Quarry</h5>
               <img
                 src="/assets/quarry2.jpg"
@@ -37,7 +37,7 @@ const About = () => {
                 className="contact-file1"
               />
             </div>
-            <div className="col">
+            <div className="col-md-4">
               <h5 className="text-center mb-3 ">Sohar Quarry</h5>
               <img
                 src="/assets/quarry3.jpg"

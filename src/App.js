@@ -6,7 +6,6 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Services from "./Components/Services";
 import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
 import Login from "./Components/Login";
 import Project from "./Components/Project";
 import Client from "./Components/Client";
@@ -46,7 +45,7 @@ const App = () => {
           element={<Viewproject />}
         />
       </Routes>
-      <Footer />
+      
     </>
   );
 };
