@@ -11,7 +11,7 @@ const About = () => {
                 who <b>We</b> are
                 <hr className="w-25 mx-auto" />
               </h1>
-              <p className="mb-2 ">
+              <p className="mb-3 ">
                 Since 1997, Marble world is a leading Omani marble manufacturing
                 Company and exporter of natural Omani marble. Starting with just
                 one quarry in 1997, today we own three quarries located in Oman:
@@ -22,7 +22,7 @@ const About = () => {
           </div>
           <div className="row mb-5 ">
             <div className="col">
-              <h5 className="text-center ">Al Mudaibi quarry</h5>
+              <h5 className="text-center mb-2 ">Al Mudaibi quarry</h5>
               <img
                 src="/assets/quarry1.jpg"
                 alt="err"
@@ -30,7 +30,7 @@ const About = () => {
               />
             </div>
             <div className="col">
-              <h5 className="text-center ">Ibri Quarry</h5>
+              <h5 className="text-center mb-2 ">Ibri Quarry</h5>
               <img
                 src="/assets/quarry2.jpg"
                 alt="err"
@@ -38,7 +38,7 @@ const About = () => {
               />
             </div>
             <div className="col">
-              <h5 className="text-center ">Sohar Quarry</h5>
+              <h5 className="text-center mb-2 ">Sohar Quarry</h5>
               <img
                 src="/assets/quarry3.jpg"
                 alt="err"
