@@ -28,14 +28,17 @@ class Contact extends Component {
     return (
       <>
         
-          <div className="container-fluid py-5">
-            <div className="row mb-5">
+          <div className="container-fluid py-4">
+            <div className="row mb-1">
               <div className="col-md-12">
                 <h3 className="fs-5 text-center mb-0">Contact Us</h3>
+                <br></br>
                 <h1 className="display-6 text-center">
                   For Marble <b>Enquiry ?</b>
                 </h1>
+                
                 <hr className="w-25 mx-auto " />
+                <br></br>
               </div>
             </div>
             <div className="row mt-1">

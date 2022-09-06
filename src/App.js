@@ -10,6 +10,7 @@ import Login from "./Components/Login";
 import Project from "./Components/Project";
 import Client from "./Components/Client";
 import Admin from "./Components/Admin";
+import Footer from "./Components/Footer";
 //crud operation
 import Editproject from "./Components/Projectss/Editproject";
 import Addproject from "./Components/Projectss/Addproject";
@@ -46,6 +47,7 @@ const App = () => {
         />
       </Routes>
       
+      <Footer/>
     </>
   );
 };

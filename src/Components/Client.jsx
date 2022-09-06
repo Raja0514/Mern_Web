@@ -49,7 +49,7 @@ class Client extends React.Component {
             </div>
           </div>
 
-          <div className="row  ">
+          <div className="row mb-5  ">
             {this.state.datas.length > 0 &&
               this.state.datas.map((pro) => {
                 return (

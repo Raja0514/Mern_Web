@@ -18,3 +18,12 @@ body {
   height: 100px;
   
 }
+.align{
+ color: white;
+  text-align: center;
+  background-color: rgb(130, 16, 158);
+  background: linear-gradient(90deg,rgb(130, 16, 158)50%,rgb(130, 16, 158)100%);
+  padding: 20px;
+  
+  
+}
