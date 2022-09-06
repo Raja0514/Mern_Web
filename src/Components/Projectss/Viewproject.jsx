@@ -63,7 +63,7 @@ getId();
                 src={image}
                 onChange={(e)=>setImage(e.target.value)}
                 alt="err"
-                className="contact-file"
+                className="contact-file01"
               />
             </div>
 
@@ -85,7 +85,7 @@ getId();
                 src={logo}
                 onChange={(e)=>setLogo(e.target.value)}
                 alt="err"
-                className="contact-file"
+                className="contact-file01"
               />
             </div>
 
