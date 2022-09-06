@@ -7,6 +7,7 @@ const Services = () => {
         <div className="row mb-5 py-2 ">
           <div className="col mb-2">
             <h3 className="fs-5 text-center ">Our Services</h3>
+            <br></br>
             <h1 className="display-6 text-center">
               Our <b>Marble Cutting Technology</b> servies
             </h1>

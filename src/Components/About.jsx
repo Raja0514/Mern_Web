@@ -7,6 +7,7 @@ const About = () => {
           <div className="row mt-5">
             <div className="col align-items-center">
               <div className="fs-5  text-center">About Us</div>
+              <br></br>
               <h1 className="display6 mb-2 text-center">
                 who <b>We</b> are
                 <hr className="w-25 mx-auto" />
