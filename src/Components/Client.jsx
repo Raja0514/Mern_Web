@@ -62,6 +62,7 @@ class Client extends React.Component {
                               src={pro.logo}
                               alt="err"
                               className="contact-file0"
+                              
                             />
                           </div>
                         </div>
