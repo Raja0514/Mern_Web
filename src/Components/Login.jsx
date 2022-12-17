@@ -27,7 +27,7 @@ const Login = () => {
     console.log(password);
 
     axios
-      .post("https://rak0000.herokuapp.com/login", user)
+      .post("https://mernweb.onrender.com//login", user)
 
       //console.log(user)
 

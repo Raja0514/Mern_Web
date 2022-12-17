@@ -16,7 +16,7 @@ const Viewproject = () => {
   useEffect(()=>{
 
   const getId = async()=>{
-  let res= await axios.get(`https://rak0000.herokuapp.com/${_id}`)
+  let res= await axios.get(`https://mernweb.onrender.com/${_id}`)
   
   console.log(res)
   

@@ -30,7 +30,7 @@ class Addproject extends React.Component {
 
     ) {
       axios
-        .post("https://rak0000.herokuapp.com/post", this.state)
+        .post("https://mernweb.onrender.com/post", this.state)
         
         .then((res) => {
           this.setState({ photo: "", project: "", location: "", year: "",logo:"" });

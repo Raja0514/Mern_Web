@@ -10,7 +10,7 @@ const Admin = () => {
   const [datas, setData] = useState([]);
   console.log(datas);
   const getId = async () => {
-    let res = await axios.get(`https://rak0000.herokuapp.com/data`);
+    let res = await axios.get(`https://mernweb.onrender.com/data`);
     console.log(res);
     setData(res.data);
   };
@@ -27,7 +27,7 @@ const Admin = () => {
   const handleDelete = async (_id) => {
     console.log("working");
 
-    await axios.delete(`https://rak0000.herokuapp.com/delete/${_id}`);
+    await axios.delete(`https://mernweb.onrender.com/${_id}`);
     getId();
   };
 

@@ -10,7 +10,7 @@ class Project extends React.Component {
   }
 
   componentDidMount = () => {
-    axios.get("https://rak0000.herokuapp.com/data").then((res) => {
+    axios.get("https://mernweb.onrender.com/data").then((res) => {
       const datac = res.data;
       console.log(datac);
       this.setState({ datas: datac });

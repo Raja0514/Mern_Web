@@ -17,7 +17,7 @@ class Contact extends Component {
     e.preventDefault();
     if (this.state.name !== "" && this.state.message !== "") {
       axios
-        .post("https://rak0000.herokuapp.com/contact", this.state)
+        .post("https://mernweb.onrender.com/contact", this.state)
         .then((res) => {
           this.setState({ name: "", message: "" });
           console.log(res);
