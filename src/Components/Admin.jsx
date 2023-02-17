@@ -29,14 +29,14 @@ const Admin = () => {
     
     
   };
-  const handleDelete = async () => {
+  const handleDelete = async (_id) => {
 
     console.log("working");
 
     await axios.delete(`https://mernweb.onrender.com/${_id}`);
 
     getId();
-    
+
   };
 
   return (
