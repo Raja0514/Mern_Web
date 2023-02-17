@@ -9,14 +9,19 @@ const Admin = () => {
   const Navigate=useNavigate()
   const [datas, setData] = useState([]);
   console.log(datas);
+
   const getId = async () => {
     let res = await axios.get(`https://mernweb.onrender.com/data`);
     console.log(res);
     setData(res.data);
   };
+
+
   useEffect(() => {
     getId();
   }, []);
+
+
   const handlelogout = () => {
     localStorage.clear();
     //window.location.reload();
@@ -24,11 +29,14 @@ const Admin = () => {
     
     
   };
-  const handleDelete = async (_id) => {
+  const handleDelete = async () => {
+
     console.log("working");
 
     await axios.delete(`https://mernweb.onrender.com/${_id}`);
+
     getId();
+    
   };
 
   return (
@@ -111,7 +119,7 @@ const Admin = () => {
                               <i className="fa fa-pen" />
                             </Link>
                             <button
-                              onClick={(e) => handleDelete(pro._id)}
+                              onClick={() => handleDelete()}
                               className="btn btn-success my-1"
                             >
                               <i className="fa fa-trash" />

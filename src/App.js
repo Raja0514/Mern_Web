@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 //components
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
@@ -33,7 +33,8 @@ const App = () => {
         <Route element={<PrivateRoutes />}>
           <Route path="/admin" element={<Admin />} />
         </Route>
-        <Route
+
+                <Route
           path="/Components/Projectss/Editproject/:_id"
           element={<Editproject />}
         />
